@@ -1,0 +1,285 @@
+form{
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: rgb(40, 214, 130);
+}
+#grid-container{
+  display:grid;
+  grid-template-columns: repeat(auto-fit,minmax(150px, 1fr));
+  grid-template-rows: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(40, 214, 130);
+}
+.card{
+  width:150px;
+  height:196px;
+  justify-self: center;
+  transition: transform .2s;
+  background: url("../img/playingCards_back.svg");
+  background-size: 750px 600px;
+  background-position: -6px -6px;
+}
+.card:hover{
+  transform: scale(1.04);
+}
+.card#AceSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: 0px 0px;
+}
+.card#TwoSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -150px 0px;
+}
+.card#ThreeSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -300px 0px;
+}
+.card#FourSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -450px 0px;
+}
+.card#FiveSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -600px 0px;
+}
+.card#SixSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -750px 0px;
+}
+.card#SevenSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -900px 0px;
+}
+.card#EightSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1050px 0px;
+}
+.card#NineSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1200px 0px;
+}
+.card#TenSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1350px 0px;
+}
+.card#JackSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1500px 0px;
+}
+.card#QueenSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1650px 0px;
+}
+.card#KingSpades{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1800px 0px;
+}
+.card#AceClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: 0px -200px;
+}
+.card#TwoClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -150px -200px;
+}
+.card#ThreeClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -300px -200px;
+}
+.card#FourClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -450px -200px;
+}
+.card#FiveClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -600px -200px;
+}
+.card#SixClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -750px -200px;
+}
+.card#SevenClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -900px -200px;
+}
+.card#EightClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1050px -200px;
+}
+.card#NineClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1200px -200px;
+}
+.card#TenClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1350px -200px;
+}
+.card#JackClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1500px -200px;
+}
+.card#QueenClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1650px -200px;
+}
+.card#KingClubs{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1800px -200px;
+}
+.card#AceDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: 0px -400px;
+}
+.card#TwoDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -150px -400px;
+}
+.card#ThreeDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -300px -400px;
+}
+.card#FourDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -450px -400px;
+}
+.card#FiveDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -600px -400px;
+}
+.card#SixDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -750px -400px;
+}
+.card#SevenDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -900px -400px;
+}
+.card#EightDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1050px -400px;
+}
+.card#NineDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1200px -400px;
+}
+.card#TenDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1350px -400px;
+}
+.card#JackDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1500px -400px;
+}
+.card#QueenDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1650px -400px;
+}
+.card#KingDiamonds{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1800px -400px;
+}
+.card#AceHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: 0px -600px;
+}
+.card#TwoHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -150px -600px;
+}
+.card#ThreeHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -300px -600px;
+}
+.card#FourHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -450px -600px;
+}
+.card#FiveHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -600px -600px;
+}
+.card#SixHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -750px -600px;
+}
+.card#SevenHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -900px -600px;
+}
+.card#EightHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1050px -600px;
+}
+.card#NineHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1200px -600px;
+}
+.card#TenHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1350px -600px;
+}
+.card#JackHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1500px -600px;
+}
+.card#QueenHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1650px -600px;
+}
+.card#KingHearts{
+  background: url("../img/playingCards.svg");
+  background-size: 1950px 800px;
+  background-position: -1800px -600px;
+}

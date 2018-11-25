@@ -1,0 +1,32 @@
+:root{
+  --gray: #42443f;
+  --light: #987836;
+  --dark: #182533;
+
+  --white: rgb(250,250,250);
+  --black: rgb(10,10,10);
+
+  background-color: var(--black);
+}
+*{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#wrapper{
+  display: flex;
+  background-color: var(--highlight);
+}
+li{
+  border-width: 5px;
+  list-style-type: none;
+  display: inline-block;
+}
+a li{
+  padding: 10px;
+  text-decoration: none;
+  color: var(--white);
+}
+a li:hover{
+  background-color: var(--dark);
+}
