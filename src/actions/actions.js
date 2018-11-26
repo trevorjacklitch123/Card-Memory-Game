@@ -4,5 +4,5 @@ export function formSubmitted(suits){
     return {type: FORM_SUBMITTED, suits}
 }
 export function cardClicked(card){
-    return {type: CARD_CLICKED, card}
+    return {type: CARD_CLICKED, suit: card.suit, number: card.number}
 }
