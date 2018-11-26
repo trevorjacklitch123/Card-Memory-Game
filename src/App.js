@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import { Provider } from 'react-redux';
+import App from './components/App';
+import store from './store';
 
-class App extends Component {
+class CompleteApp extends Component {
   render() {
     return (
-      <form id="SuitForm">
-        <input id="spades" type="checkbox" checked /> All Spades<br />
-        <input id="clubs" type="checkbox" /> All Clubs<br />
-        <input id="diamonds" type="checkbox" /> All Diamonds<br />
-        <input id="hearts" type="checkbox" /> All Hearts<br />
-        <input id="submit" type="submit" value="Start Memory Game!" />
-      </form>
+      <Provider store={store}>
+        <App />
+      </Provider>
     );
   }
 }
 
-export default App;
+export default CompleteApp;

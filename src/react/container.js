@@ -1,3 +1,7 @@
+import React from 'react';
+
+
+
 //Arrays with all id names for each suit
 const spadesArray = ["TwoSpades", "ThreeSpades", "FourSpades", "FiveSpades", "SixSpades",
 "SevenSpades", "EightSpades", "NineSpades", "TenSpades",

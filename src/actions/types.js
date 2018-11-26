@@ -1,0 +1,2 @@
+export const FORM_SUBMITTED = 'FORM_SUBMITTED';
+export const CARD_CLICKED = 'CARD_CLICKED';
