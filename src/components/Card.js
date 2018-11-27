@@ -1,45 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-class Card extends React.Component{
-constructor(props){
-    super(props);
+const Card = ({ onClick, card, correct }) => (
+    <div
+    className="Card"
+    id={ correct && card }
+    onClick={ correct && onClick }
+    />
+)
 
-    this.state = {
-    clicked: false,
-    }
-
-    this.handleClick = this.handleClick.bind(this);
+Card.PropTypes = {
+    onClick: PropTypes.func.isRequired,
+    card: PropTypes.string.isRequired,
+    correct: PropTypes.bool.isRequired
 }
-
-handleClick(){
-    this.setState({
-    clicked: true
-    })
-    if(correctOrderArray[currentNumber] != this.props.type) {
-    setTimeout(function() {
-        this.setState({clicked: false});
-        this.props.resetCurrentNumber();
-    }.bind(this), 1000);
-    }
-    else
-    this.props.incrementCurrentNumber();
-}
-componentWillUpdate(){
-    if(this.props.currentNumber === 0)
-    {
-    this.setState({
-        clicked: false
-    })
-    }
-}
-
-render(){
-    if(this.state.clicked)
-    return (<div className="card" id={this.props.type} />)
-    else
-    return (<div className="card" onClick={this.handleClick} />)
-    }
-}
-
 
 export default Card;

@@ -1,24 +1,40 @@
 import {
     FORM_SUBMITTED,
-    CARD_CLICKED
+    RIGHT_CARD_CLICKED,
+    WRONG_CARD_CLICKED
 } from '../actions/types';
 
-export function formSubmission(state = [], action){
+export function formSubmission(previousState = [], action){
     switch(action.type){
         case FORM_SUBMITTED:
-            return action.suits
+            return Object.assign({},
+                );
         default:
-            return state;
+            return previousState;
     }
 }
 
-export function cards(state = [], action){
+export function cards(previousState = [], action){
     switch(action.type){
-        case CARD_CLICKED:
-            if(action.suit === ){
-
-            }
+        case RIGHT_CARD_CLICKED:
+                return Object.assign({},
+                    previousState,
+                    previousState.actualOrder.map((card) => {
+                        if(card.type === action.card){
+                            return Object.assign({}, card, {correct: true});
+                        }
+                        return card;
+                    }),
+                    { numCorrect: previousState.numCorrect + 1 }
+                );
+        case WRONG_CARD_CLICKED:
+            return Object.assign({},
+                previousState,
+                previousState.actualOrder.map((card) => {
+                    return Object.assign({}, card, { correct: false });
+                }),
+                { numCorrect: 0 });
         default:
-            return state;
+            return previousState;
     }
 }
