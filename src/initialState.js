@@ -22,32 +22,39 @@ const heartsArray = ["TwoHearts", "ThreeHearts", "FourHearts", "FiveHearts", "Si
 "SevenHearts", "EightHearts", "NineHearts", "TenHearts",
 "JackHearts", "QueenHearts", "KingHearts", "AceHearts"];
 
-export default function createInitialReduxState(suits){
+export function createCorrectOrder(suits){
     let correctOrder = [];
-    let actualOrder = [];
     if(suits.includes("Spades")){
-        correctOrder.concat(spadesArray);
+        correctOrder = correctOrder.concat(spadesArray);
     }
     if(suits.includes("Clubs")){
-        correctOrder.concat(clubsArray);
+        correctOrder = correctOrder.concat(clubsArray);
     }
     if(suits.includes("Diamonds")){
-        correctOrder.concat(diamondsArray);
+        correctOrder = correctOrder.concat(diamondsArray);
     }
     if(suits.includes("Hearts")){
-        correctOrder.concat(heartsArray);
+        correctOrder = correctOrder.concat(heartsArray);
     }
-    actualOrder = shuffleArray(
-        correctOrder.map((card) => {
-            return { type: card, correct: false }
-        })
-    );
-
-    const state = {
-        correctOrder: correctOrder,
-        actualOrder: actualOrder,
-        numCorrect: 0
-        };
-
-    return state;
+    return correctOrder;
+}
+export function createActualOrder(suits){
+    let actualOrder = [];
+    if(suits.includes("Spades")){
+        actualOrder = actualOrder.concat(spadesArray);
+    }
+    if(suits.includes("Clubs")){
+        actualOrder = actualOrder.concat(clubsArray);
+    }
+    if(suits.includes("Diamonds")){
+        actualOrder = actualOrder.concat(diamondsArray);
+    }
+    if(suits.includes("Hearts")){
+        actualOrder = actualOrder.concat(heartsArray);
+    }
+    shuffleArray(actualOrder);
+    actualOrder = actualOrder.map((card) => {
+        return {type: card, correct: false};
+    });
+    return actualOrder;
 }

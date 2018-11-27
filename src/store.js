@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 import rootReducer from './reducers/index.js';
-import { formSubmitted, rightCardClicked, wrongCardClicked } from './actions/actions';
-import iState from './initialState.js';
+import { correctOrderCards, actualOrderCards, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset } from './actions/actions';
+import { createCorrectOrder, createActualOrder } from './initialState.js';
 
 const initialState = {};
 
@@ -11,8 +11,7 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-store.dispatch(formSubmitted(iState(['Spades'])));
-store.dispatch(formSubmitted(iState(['Spades',  'Clubs'])));
-store.dispatch(formSubmitted(iState(['Spades', 'Clubs', 'Diamonds', 'Hearts'])));
+store.dispatch(correctOrderCards(createCorrectOrder(["Spades", "Clubs"])));
+store.dispatch(actualOrderCards(createActualOrder(["Spades", "Clubs"])));
 
 export default store;

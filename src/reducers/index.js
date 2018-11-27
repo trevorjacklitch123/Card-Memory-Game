@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
-import { formSubmission, cards } from './reducers.js';
+import { correctOrder, actualOrder, numCorrect } from './reducers.js';
 
 export default combineReducers({
-    formSubmission, cards
+    correctOrder,
+    actualOrder,
+    numCorrect
 });
