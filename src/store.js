@@ -1,6 +1,7 @@
 import { createStore } from 'redux';
 import rootReducer from './reducers/index.js';
 import { formSubmitted, rightCardClicked, wrongCardClicked } from './actions/actions';
+import iState from './initialState.js';
 
 const initialState = {};
 
@@ -10,8 +11,8 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-const unsubscribe = store.subscribe(() => console.log(store.getState()));
-
-store.dispatch(formSubmitted(["Spades"]));
+store.dispatch(formSubmitted(iState(['Spades'])));
+store.dispatch(formSubmitted(iState(['Spades',  'Clubs'])));
+store.dispatch(formSubmitted(iState(['Spades', 'Clubs', 'Diamonds', 'Hearts'])));
 
 export default store;
