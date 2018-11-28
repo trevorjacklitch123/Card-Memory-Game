@@ -9,8 +9,18 @@ const CardList = ({ cards }) => (
             key={index}
             className="Card"
             id={card.correct ? card.type : ""}
-            onClick={card.correct ? () => {} : }
             />
         ))}
     </div>
 )
+
+CardList.propTypes = {
+    cards: PropTypes.arrayOf(
+        PropTypes.shape({
+            type: PropTypes.string.isRequired,
+            correct: PropTypes.bool.isRequired
+        }).isRequired
+    ).isRequired
+}
+
+export default CardList;
