@@ -1,11 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import CardList from '../components/CardList';
 import { rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset } from '../actions/actions';
-
-const cardList = (actualOrder) => {
-    
-}
 
 const mapStateToProps = state => ({
     cards: state.actualOrder
@@ -13,9 +8,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     rightCardClicked: card => dispatch(rightCardClicked(card)),
-    wrongCardClicked: wrongCardClicked(),
-    numCorrectIncrement: numCorrectIncrement(),
-    numCorrectReset: numCorrectReset()
+    wrongCardClicked: () => wrongCardClicked(),
+    numCorrectIncrement: () => numCorrectIncrement(),
+    numCorrectReset: () => numCorrectReset()
 });
 
 export default connect(

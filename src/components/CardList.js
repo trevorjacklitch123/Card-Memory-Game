@@ -7,8 +7,8 @@ const CardList = ({ cards }) => (
         {cards.map((card, index) => (
             <Card
             key={index}
-            className="Card"
-            id={card.correct ? card.type : ""}
+            card={card.type}
+            correct={card.correct}
             />
         ))}
     </div>

@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 const Card = ({ onClick, card, correct }) => (
     <div
     className="Card"
-    id={ correct && card }
-    onClick={ correct && onClick }
+    id={ correct ? card : "" }
+    onClick={ correct ? () => {} : onClick }
     />
 )
 
-Card.PropTypes = {
+Card.propTypes = {
     onClick: PropTypes.func.isRequired,
     card: PropTypes.string.isRequired,
     correct: PropTypes.bool.isRequired
