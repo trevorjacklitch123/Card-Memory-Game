@@ -26,8 +26,39 @@ const Form = ({ dispatch }) => {
             <input type="radio" name="numSuits" ref={node => (threeSuits = node)}value="3 Suits" /> 3 Suits<br />
             <input type="radio" name="numSuits" ref={node => (fourSuits = node)}value="4 Suits" /> 4 Suits<br />
             <input type="submit" value="New Game" />
+
         </form>
     )
+}
+
+class NewForm extends React{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            value: "1"
+        }
+    }
+
+    handleChange = (e) => {
+
+    }
+
+    render(){
+        return (
+            <div>
+                <form>
+                    <input
+                    type="radio"
+                    name="suits"
+                    value = "1"
+                    onChange={(e) => this.handleChange(e)}
+                    checked={this.state.value ===}
+                    />
+                </form>
+            </div>
+        )
+    }
 }
 
 export default connect()(Form);
