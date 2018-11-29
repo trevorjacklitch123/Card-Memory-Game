@@ -20,7 +20,11 @@ CardList.propTypes = {
             type: PropTypes.string.isRequired,
             correct: PropTypes.bool.isRequired
         }).isRequired
-    ).isRequired
+    ).isRequired,
+    rightCardClicked: PropTypes.func.isRequired,
+    wrongCardClicked: PropTypes.func.isRequired,
+    numCorrectIncrement: PropTypes.func.isRequired,
+    numCorrectReset: PropTypes.func.isRequired
 }
 
 export default CardList;
