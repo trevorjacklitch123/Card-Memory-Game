@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card.js';
 
-const CardList = ({ cards, onClick }) => (
+const CardList = ({ cards }) => (
     <div id="grid-container">
         {cards.map((card, index) => (
             <Card
             key={index}
             card={card.type}
             correct={card.correct}
-            onClick={onClick(card)}
+            onClick={() => {}}
             />
         ))}
     </div>

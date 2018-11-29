@@ -3,35 +3,7 @@ import { connect } from 'react-redux';
 import { actualOrderCards, correctOrderCards, numCorrectReset } from '../actions/actions.js';
 import { createCorrectOrder, createActualOrder } from '../initialState';
 
-const Form = ({ dispatch }) => {
-    let oneSuit;
-    let twoSuits;
-    let threeSuits;
-    let fourSuits;
-    
-    return (
-        <form
-            onSubmit={e => {
-                e.preventDefault();
-                let suits = ["Spades"];
-                console.log(oneSuit, twoSuits, threeSuits, fourSuits);
-
-                dispatch(correctOrderCards(createCorrectOrder(suits)));
-                dispatch(actualOrderCards(createActualOrder(suits)));
-                dispatch(numCorrectReset());
-            }}
-        >
-            <input type="radio" name="numSuits" ref={node => (oneSuit = node)} value="1 Suit" defaultChecked /> 1 Suit<br />
-            <input type="radio" name="numSuits" ref={node => (twoSuits = node)}value="2 Suits" /> 2 Suits<br />
-            <input type="radio" name="numSuits" ref={node => (threeSuits = node)}value="3 Suits" /> 3 Suits<br />
-            <input type="radio" name="numSuits" ref={node => (fourSuits = node)}value="4 Suits" /> 4 Suits<br />
-            <input type="submit" value="New Game" />
-
-        </form>
-    )
-}
-
-class NewForm extends React{
+class Form extends React.Component{
     constructor(props){
         super(props);
 
@@ -41,20 +13,87 @@ class NewForm extends React{
     }
 
     handleChange = (e) => {
-
+        this.setState({value: e.target.value});
     }
 
     render(){
         return (
             <div>
-                <form>
+                <form
+                onSubmit={e => {
+                    e.preventDefault();
+                    let suits = [];
+                    switch(this.state.value){
+                        case "1":
+                            suits = ["Spades"];
+                            break;
+                        case "2":
+                            suits = ["Spades", "Clubs"];
+                            break;
+                        case "3":
+                            suits = ["Spades", "Clubs", "Diamonds"];
+                            break;
+                        case "4":
+                            suits = ["Spades", "Clubs", "Diamonds", "Hearts"];
+                            break;
+                        default:
+                            suits = ["Spades"];
+                    }
+                    
+                    this.props.dispatch(correctOrderCards(createCorrectOrder(suits)));
+                    this.props.dispatch(actualOrderCards(createActualOrder(suits)));
+                    this.props.dispatch(numCorrectReset());
+                }}
+                >
+                    <label>
+                        <input
+                        type="radio"
+                        name="suits"
+                        value = "1"
+                        checked={this.state.value === "1"}
+                        onChange={(e) => this.handleChange(e)}
+                        />
+                        1 Suit
+                    </label>
+                    <br />
+                    <label>
+                        <input
+                        type="radio"
+                        name="suits"
+                        value = "2"
+                        checked={this.state.value === "2"}
+                        onChange={(e) => this.handleChange(e)}
+                        />
+                        2 Suits
+                    </label>
+                    <br />
+                    <label>
+                        <input
+                        type="radio"
+                        name="suits"
+                        value = "3"
+                        checked={this.state.value === "3"}
+                        onChange={(e) => this.handleChange(e)}
+                        />
+                        3 Suits
+                    </label>
+                    <br />
+                    <label>
+                        <input
+                        type="radio"
+                        name="suits"
+                        value = "4"
+                        checked={this.state.value === "4"}
+                        onChange={(e) => this.handleChange(e)}
+                        />
+                        4 Suits
+                    </label>
+                    <br />
                     <input
-                    type="radio"
-                    name="suits"
-                    value = "1"
-                    onChange={(e) => this.handleChange(e)}
-                    checked={this.state.value ===}
+                    type="submit"
+                    value="New Game"
                     />
+                    <br />
                 </form>
             </div>
         )
