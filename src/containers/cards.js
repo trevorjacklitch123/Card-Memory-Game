@@ -9,7 +9,10 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    onClick: card => click(card)
+    rightCardClicked: (card) => dispatch(rightCardClicked(card)),
+    wrongCardClicked: () => dispatch(wrongCardClicked()),
+    numCorrectIncrement: () => dispatch(numCorrectIncrement()),
+    numCorrectReset: () => dispatch(numCorrectReset()),
 });
 
 export default connect(
