@@ -3,14 +3,13 @@ import CardList from '../components/CardList';
 import { rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset } from '../actions/actions';
 
 const mapStateToProps = state => ({
-    cards: state.actualOrder
+    cards: state.actualOrder,
+    correctOrder: state.correctOrder,
+    numCorrect: state.numCorrect
 });
 
 const mapDispatchToProps = dispatch => ({
-    rightCardClicked: card => dispatch(rightCardClicked(card)),
-    wrongCardClicked: () => wrongCardClicked(),
-    numCorrectIncrement: () => numCorrectIncrement(),
-    numCorrectReset: () => numCorrectReset()
+    onClick: card => click(card)
 });
 
 export default connect(
