@@ -2,31 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from './Card.js';
 
-const CardList = ({ cards }) => (
+const CardList = ({ cards, correctOrder, numCorrect, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset }) => (
     <div id="grid-container">
         {cards.map((card, index) => (
             <Card
             key={index}
             card={card.type}
             correct={card.correct}
-            onClick={onClick(card)}
+            onclick={onclick(card, correctOrder, numCorrect, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset)}
             />
         ))}
     </div>
 );
 
-function onClick(card){
-    const correctOrder = this.props.correctOrder;
-    const numCorrect = this.props.numCorrect;
+function onclick(card, correctOrder, numCorrect, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset){
     const nextCard = correctOrder[numCorrect];
     
     if(card === nextCard){
-        this.props.rightCardClicked(card);
-        this.props.numCorrectIncrement();
+        rightCardClicked(card);
+        numCorrectIncrement();
     }
     else{
-        this.props.wrongCardClicked();
-        this.props.numCorrectReset();
+        wrongCardClicked();
+        numCorrectReset();
     }
 }
 

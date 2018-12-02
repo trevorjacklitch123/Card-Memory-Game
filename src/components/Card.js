@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ onClick, card, correct }) => (
+const Card = ({ onclick, card, correct }) => (
     <div
     className="Card"
     id={ correct ? card : "" }
-    onClick={ correct ? () => {} : onClick(card) }
+    onclick={ correct ? () => {} : onclick(card) }
     />
 )
 
 Card.propTypes = {
-    onClick: PropTypes.func.isRequired,
+    onclick: PropTypes.func.isRequired,
     card: PropTypes.string.isRequired,
     correct: PropTypes.bool.isRequired
 }
