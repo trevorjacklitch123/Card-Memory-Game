@@ -5,7 +5,7 @@ const Card = ({ onClick, card, correct }) => (
     <div
     className="card"
     id={ correct ? card : "" }
-    onClick={ correct ? () => {} : (card) => onClick(card) }
+    onClick={ correct ? () => {} : () => onClick(card) }
     />
 )
 
