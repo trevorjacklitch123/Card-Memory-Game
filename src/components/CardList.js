@@ -9,13 +9,13 @@ const CardList = ({ cards, correctOrder, numCorrect, rightCardClicked, wrongCard
             key={index}
             card={card.type}
             correct={card.correct}
-            onclick={onclick(card, correctOrder, numCorrect, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset)}
+            onClick={(card) => onClick(card, correctOrder, numCorrect, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset)}
             />
         ))}
     </div>
 );
 
-function onclick(card, correctOrder, numCorrect, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset){
+function onClick(card, correctOrder, numCorrect, rightCardClicked, wrongCardClicked, numCorrectIncrement, numCorrectReset){
     const nextCard = correctOrder[numCorrect];
     
     if(card === nextCard){
