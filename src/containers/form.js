@@ -53,9 +53,8 @@ class Form extends React.Component{
                         checked={this.state.value === "1"}
                         onChange={(e) => this.handleChange(e)}
                         />
-                        1 Suit
+                        <span class="Form_Text">1 Suit</span>
                     </label>
-                    <br />
                     <label>
                         <input
                         type="radio"
@@ -64,9 +63,8 @@ class Form extends React.Component{
                         checked={this.state.value === "2"}
                         onChange={(e) => this.handleChange(e)}
                         />
-                        2 Suits
+                        <span class="Form_Text">2 Suits</span>
                     </label>
-                    <br />
                     <label>
                         <input
                         type="radio"
@@ -75,9 +73,8 @@ class Form extends React.Component{
                         checked={this.state.value === "3"}
                         onChange={(e) => this.handleChange(e)}
                         />
-                        3 Suits
+                        <span class="Form_Text">3 Suits</span>
                     </label>
-                    <br />
                     <label>
                         <input
                         type="radio"
@@ -86,7 +83,7 @@ class Form extends React.Component{
                         checked={this.state.value === "4"}
                         onChange={(e) => this.handleChange(e)}
                         />
-                        4 Suits
+                        <span class="Form_Text">4 Suits</span>
                     </label>
                     <br />
                     <input

@@ -1,7 +1,46 @@
+body{
+  background-color: rgb(40, 214, 130);
+}
+label{
+  font-weight: bold;
+  padding: 15;
+  margin-right: 25px;
+}
+#page_container{
+  position: relative;
+  min-height: 100vh;
+}
+#content_container{
+  padding-bottom: 50px;
+}
+#footer{
+  position: absolute;
+  height: 50px;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.Form_Text{
+  font-size: 25px;
+  color: rgb(26, 26, 26);
+  margin-left: 8px;
+  font-family: 'Courier New', Courier, monospace;
+}
+input[type="submit"]{
+  width: 250px;
+  font-size: 40px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+}
+input[type="submit"]:hover{
+  cursor: pointer;
+}
 form{
   padding-top: 20px;
   padding-bottom: 10px;
-  background-color: rgb(40, 214, 130);
+  text-align: center;
 }
 #grid-container{
   display:grid;
